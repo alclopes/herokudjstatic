@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Carga do css -->
+    {% load static %}
+    {% block stylesheet %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+    {% endblock %}
+
+    <title>My Page V20190818</title>
+</head>
+
+<body>
+    <h1>Welcome to my <img src="{% static 'img/heroku.png' %}" alt="Heroku" width="42" height="42"> first page!</h1>
+
+    <h2>Add Image</h2>
+    <form id="mypage_form" method="post" enctype="multipart/form-data" action="{% url 'mypage:index' %}" >
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="submit" value="Image Add" />
+    </form>
+
+    {% if messages %}
+        {% for message in messages.values %}
+                <strong>{{ message }}</strong>
+        {% endfor %}
+    {% endif %}
+
+    {% if myimages %}
+        <h2> Showing to last three included images. </h2>
+        <h6> All images have been reduced to 5% of their size. </h6>
+        {% for i in myimages %}
+            {{i.name}}<br />
+            <div>
+                <img src="{{ i.image.url }}" alt="{{ course.name }}" width="5%" />
+            </div>
+            <br>
+        {% empty %}
+            <p>No Images at moment - Images are deleted by expired free dyno Heroku.</p>
+        {% endfor %}
+        <br /><a href="{% url 'mypage:exclude_images' %}" class="button">"Please click here to clean your images"</a><br />
+    {% else %}
+        <br /><p>No Images at moment - Images are deleted by expired free dyno Heroku.</p><br />
+    {% endif %}
+
+</br>
+
+</html>
