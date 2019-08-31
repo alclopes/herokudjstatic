@@ -1,7 +1,7 @@
 # Deploy de Aplicação Django no Heroku - Projeto Heroku 02 - Dj-Static
 * Gerenciamento de arquivos estáticos em servidor Heroku usando biblioteca dj-static
 
-Conheça esta aplicação no [Heroku](https://alclopes-test.herokuapp.com/).
+Conheça esta aplicação no [Heroku](https://herokudjstatic.herokuapp.com/).
 
 ## Características básicas desta aplicação
 ##### 01. Projeto de página única 
@@ -58,7 +58,7 @@ Conheça esta aplicação no [Heroku](https://alclopes-test.herokuapp.com/).
 ##### 3. Gestão de arquivos média 
 => Situação: Feito/Sucesso (mais detalhes abaixo)
 
-#### Detalhes da Situação do Projeto
+## Detalhes da Situação do Projeto
 
 ##### 1. Arquivos estáticos - Situação: Aguardando Solução
 * Envolveu: Imagens e CSS

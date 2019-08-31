@@ -1,7 +1,7 @@
 # Deploy Django Application on Heroku - Heroku Project 02 - Dj-Static
 * Static file management on Heroku server using dj-static library
 
-Meet this application on [Heroku] (https://alclopes-test.herokuapp.com/).
+Meet this application on [Heroku] (https://herokudjstatic.herokuapp.com/).
 
 ## Basic Features of this Application
 ##### 01. Single Page Design
@@ -58,7 +58,7 @@ Meet this application on [Heroku] (https://alclopes-test.herokuapp.com/).
 ##### 3. Medium File Management
 => Status: Done / Success (more details below)
 
-#### Project Status Details
+## Project Status Details
 
 ##### 1. Static Files - Status: Awaiting Solution
 * Involved: Images and CSS
